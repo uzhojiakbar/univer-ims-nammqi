@@ -1,0 +1,89 @@
+.schedules {
+	background-color: var(--mantine-color-white);
+	padding: rem(20px);
+	border-radius: rem(12px);
+}
+
+
+.text {
+	font-size: rem(24px);
+}
+
+.header {
+	position: sticky;
+	top: 0;
+	z-index: 2;
+	background-color: #F6F5F1;
+}
+
+.audits {
+	position: sticky;
+	left: 0;
+	z-index: 1;
+	background-color: #F6F5F1;
+}
+
+.schedules_wrapper {
+	overflow: auto;
+	border-radius: rem(12px);
+	margin-top: rem(30px);
+	background-color: #F6F5F1;
+	padding-right: 10px;
+	padding-bottom: 10px;
+}
+
+.audit {
+	min-width: rem(115px);
+	height: rem(120px);
+	border-right: 1px solid #dcdcdc;
+	border-bottom: 1px solid #dcdcdc;
+}
+
+.label {
+	height: rem(60px);
+	width: 100%;
+	font-weight: 600;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	border-right: 1px solid #dcdcdc;
+
+	&:last-child {
+		border-right: none;
+
+	}
+}
+
+.day {
+	width: rem(125px);
+	height: rem(60px);
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	border-right: 1px solid #dcdcdc;
+	border-top: 1px solid #dcdcdc;
+	border-bottom: 1px solid #dcdcdc;
+
+
+}
+
+.audit_number {
+	min-width: rem(115px);
+	height: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	border-right: 1px solid #dcdcdc;
+	border-bottom: 1px solid #dcdcdc;
+}
+
+.audit_day {
+	@extend .day;
+	border-top: none;
+	background-color: #fff;
+	border-radius: 0;
+	color: var(--mantine-color-green-6);
+	&:focus {
+		outline: none;
+	}
+}

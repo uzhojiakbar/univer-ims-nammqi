@@ -1,22 +1,23 @@
-import classes from "@/components/Layout/LayoutTypes/SimpleSideBar.module.css";
-import useAuth from "@/utils/hooks/useAuth";
-import UserPopOver from "../../UserPopOver/UserPopOver";
-import {
-  IconLogout,
-} from '@tabler/icons-react';
+import useAuth from '@/utils/hooks/useAuth';
+import { IconLogout } from '@tabler/icons-react';
 
-export default function SimpleSideBarBottomContent(){
-  const {signOut} = useAuth()
+import classes from './SimpleSideBar.module.scss';
+import { useTranslation } from 'react-i18next';
 
-  return(
+export default function SimpleSideBarBottomContent() {
+  const { signOut } = useAuth();
+  const { t } = useTranslation();
+  return (
     <>
-      <UserPopOver/>
-      <div className={classes.link} onClick={(event) => {
-        signOut()
-      }}>
-        <IconLogout className={classes.icon}/>
-        <span>Exit</span>
+      <div
+        className={classes.link}
+        onClick={(event) => {
+          signOut();
+        }}
+      >
+        <IconLogout className={classes.icon} />
+        <span>{t('exit')}</span>
       </div>
     </>
-  )
+  );
 }

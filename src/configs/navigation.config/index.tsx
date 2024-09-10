@@ -1,24 +1,33 @@
-import type {NavigationTree} from '@/@types/navigation';
-import {IconDashboard, IconUser} from '@tabler/icons-react';
+import type { NavigationTree } from '@/@types/navigation';
+import { IconDoor, IconList, IconBuildingCommunity } from '@tabler/icons-react';
 
 const navigationConfig: NavigationTree[] = [
   {
-    key: 'dashboard',
-    path: '/dashboard',
-    title: 'Dashboard',
-    translateKey: '',
-    icon: IconDashboard,
+    key: 'buildings',
+    path: '/buildings',
+    title: 'Buildings',
+    translateKey: 'buildings',
+    icon: IconBuildingCommunity,
     authority: [],
-    subMenu: []
+    subMenu: [],
   },
   {
-    key: 'users',
-    path: '/users',
-    title: 'Users',
-    translateKey: '',
-    icon: IconUser,
+    key: 'rooms',
+    path: '/rooms',
+    title: 'Rooms',
+    translateKey: 'rooms',
+    icon: IconDoor,
     authority: [],
-    subMenu: []
+    subMenu: [],
+  },
+  {
+    key: 'schedules',
+    path: '/schedules',
+    title: 'Schedules',
+    translateKey: 'schedules',
+    icon: IconList,
+    authority: [],
+    subMenu: [],
   },
 ];
 
